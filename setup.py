@@ -15,5 +15,5 @@ setup(
     version="0.1",
     description="Gera médias de desempenho em função do tempo",
     options={"build_exe": build_exe_options},
-    executables=[Executable("geradordesempenho.py", base=base, icon="GD.ico")]
+    executables=[Executable("geradordesempenho.py", base=base)]
 )

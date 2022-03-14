@@ -10,7 +10,6 @@ posy=at/2-aw/2
 interface.geometry('%dx%d+%d+%d'%(lw,aw,posx,posy))
 interface.wm_minsize(width=300, height=300)
 interface.wm_maxsize(width=300, height=300)
-interface.iconbitmap(r'GD.ico')
 
 temp10=float()
 seconds=int()
@@ -166,13 +165,14 @@ class re:
                             print(decque)
                             numsre.set(f'{hora1:02d}:{mim1:02d}:{seg1:02d}')
                             seconds2-=1
-                            a-=((10/(valt2*valtn2))/60.5)
+                            a-=((10/(valt2*valtn2))/60)
                             if seconds2<0:
                                 textmed.set(str(0.0))
                                 quebra()
                                 break
                             print(a)
-                            textmed.set(str(f'{a:.1f}'))
+                            if seconds2>0:
+                                textmed.set(str(f'{a:.1f}'))
                             interface.update()
                             sleep(tempcicl)
                         else:
